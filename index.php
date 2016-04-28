@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<meta name="author" content="Prachi Manchanda">
 	<meta name="description" content="Quote of the Day">
@@ -70,5 +70,5 @@
 
 		$res=str_replace("href=", "",$res);
 	
-	echo $res;
+	echo stripslashes(mb_convert_encoding($res,"HTML-ENTITIES", "UTF-8"));
 ?>
